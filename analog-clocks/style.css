@@ -1,0 +1,158 @@
+body {
+	background: #212121; 
+}
+
+.clock {
+	width: 20rem;
+	height: 20rem;
+	background: lightblue;
+	border: 7px solid #000;
+	border-radius: 50%;
+	position: relative;
+	padding: 1.2rem;
+	box-shadow: 0 20px 30px #684b6aa6;
+	margin: 0px auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fefefc;
+	border-radius: 100%;
+	box-shadow: 0 20px 30px #3e2f3f73;
+	overflow: hidden;
+}
+
+.container::after {
+	transform: rotate(90deg);
+}
+
+.container::before,
+.container::after,
+.container .time-marker {
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #545271;
+	z-index: 0;
+	left: 49%;
+}
+
+
+.container .time-marker {
+	width: 3px;
+}
+
+
+.container .time-marker.time-marker-one {
+	transform: rotate(30deg);
+}
+
+.container .time-marker.time-marker-two {
+	transform: rotate(60deg);
+}
+
+.container .time-marker.time-marker-three {
+	transform: rotate(120deg);
+}
+
+.container .time-marker.time-marker-four {
+	transform: rotate(150deg);
+}
+
+.time-wrapper {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	background: #fefefc;
+	background-image: url(bg.jpg);
+	background-repeat: round;
+	border-radius: 100%;
+	z-index: 1;
+}
+
+.time-wrapper::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 16px;
+	height: 16px;
+	border-radius: 18px;
+	margin-left: -9px;
+	margin-right: -6px;
+	background: #000;
+	z-index: 11;
+	
+}
+
+.pointer {
+	width: 50%;
+	right: 50%;
+	top: 51%;
+	position: absolute;
+	border-radius: 6px;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.pointer.hour-pointer {
+	width: 23%;
+	height: 8px;
+	z-index: 3;
+	background: #545271;
+}
+
+.pointer.min-pointer {
+	width: 30%;
+	height: 6px;
+	z-index: 10;
+	background: #61afff;
+}
+
+.pointer.sec-pointer {
+	width: 43%;
+	height: 4px;
+	background: #ff5e5e;
+}
+
+.digital-clock {
+	width: 12rem;
+	height: 2.5rem;
+	color: #fff;
+	background: #8BF4F1;
+	text-align: center;
+	font-family: 'DS-Digital', monospace;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 0px auto;
+	margin-top: 2.5rem;
+	border: 7px solid slategray;
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: 0 20px 30px #684b6aa6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
